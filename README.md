@@ -1,6 +1,6 @@
 ## README
 
-Repository for the paper "De Benedictis, L., Rondinelli, R., Vinciotti, V. (2022). Cultures as networks of cultural traits: A unifying framework for measuring culture and cultural distances. Journal of the Royal Statistical Society: Series A."
+Repository for the paper "Luca De Benedictis, Roberto Rondinelli, Veronica Vinciotti, Cultures as networks of cultural traits: a unifying framework for measuring culture and cultural distances, Journal of the Royal Statistical Society Series A: Statistics in Society, 2023;, qnac007, https://doi.org/10.1093/jrsssa/qnac007"
 
 The R objects contained in the R Project allow each script to be run individually, i.e., although there is a chronological order of the scripts, you do not need to run the previous ones in order to obtain a specific output.
 
