@@ -4,12 +4,12 @@
 #
 #     Luca De Benedictis - Roberto Rondinelli - Veronica Vinciotti
 #
-# 		                    Script 03 - BDgraph
+# 		                    Script 01 - BDgraph
 # ====================================================================
 
 
 
-# Load Useful objects (if not already in your environment) 
+# Load data 
 data <- readRDS("data")
 
 

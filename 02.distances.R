@@ -4,7 +4,7 @@
 #
 #     Luca De Benedictis - Roberto Rondinelli - Veronica Vinciotti
 #
-# 		              Script 04 - BDgraph distances
+# 		              Script 02 - distances
 # ====================================================================
 
 
