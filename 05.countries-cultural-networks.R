@@ -25,6 +25,7 @@ remotes::install_version("Rttf2pt1", version = "1.3.8")
 library(Rttf2pt1)
 library(png)
 library(ggplot2)
+library(igraph)
 
 
 #------------------ EXAMPLE GRAPH: UNITED STATES

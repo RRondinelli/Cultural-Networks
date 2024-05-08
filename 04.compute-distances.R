@@ -15,7 +15,6 @@
 
 
 # Load useful objects
-data <- readRDS("data")             # required if you start from this script
 load("bdgraph_estimates_new.RData") # networks objects generated in script "02.BDgraph_networks-objects", required if you start from this script 
 pca_map6 <- readRDS("pca_map6")
 countries <- readRDS("countries")
@@ -234,7 +233,7 @@ distances1 <- distances %>%
          "Country2.iso3" = "iso3.y")
 
 write.table(distances1, file="distances_WVS-W6.csv", row.names = FALSE)
-write.csv2(distances1, file="distances_WVS-W6_1.csv")
+# write.csv2(distances1, file="distances_WVS-W6_1.csv")
 
 
  
