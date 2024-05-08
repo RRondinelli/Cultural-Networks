@@ -15,8 +15,8 @@
 
 
 # Load useful objects
-load("bdgraph_estimates_new.RData") # networks objects generated in script "02.BDgraph_networks-objects"
 data <- readRDS("data")             # required if you start from this script
+load("bdgraph_estimates_new.RData") # networks objects generated in script "02.BDgraph_networks-objects", required if you start from this script 
 pca_map6 <- readRDS("pca_map6")
 countries <- readRDS("countries")
 
@@ -143,7 +143,9 @@ ggcorrplot(cor.mat,
            outline.color = "white") +
   geom_vline(xintercept=1:ncol(cor.mat)-0.5, colour="white", size=4) +
   geom_hline(yintercept=1:ncol(cor.mat)-0.5, colour="white", size=4) +
-  theme(text = element_text(face ="bold", family="LM Roman 10"),
+  theme(text = element_text(face ="bold" 
+                            # , family="LM Roman 10"
+                            ),
         axis.text.x = element_text(size=15),
         axis.text.y = element_text(size=15),
         legend.text = element_text(size=13),

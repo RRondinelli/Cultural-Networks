@@ -6,7 +6,7 @@ The R objects contained in the R Project allow each script to be run individuall
 
 
 
-Note: This is true if you want to use our elaborations of the graphical models from BDgraph. Otherwise you need to follow and run the "03.BDgraph_infer-networks.R" script to generate your BDgraph objects. 
+Note: This is true if you want to use our elaborations of the graphical models from BDgraph. Otherwise you need to follow and run the "01.BDgraph_infer-networks.R" script to generate your BDgraph objects. 
 
 Note: The text font we made use for the Figures of the paper is "LM Roman 10". Here, to avoid problems with the R compilation of the code under different Operating System, we consider the default text font of R.
 

@@ -13,6 +13,7 @@
 data <- readRDS("data")
 load("bdgraph_2million.RData") # comment to load your elaborations
 #load("bdgraph_estimates")     # uncomment to load your elaborations
+library(igraph)
 
 
 #--------------------------- Standardized precision matrices and partial correlation
@@ -23,6 +24,7 @@ names(bdkhat) <- country.names
 names(bdprob) <- country.names
 names(bdadj) <- country.names
 
+
 # Transformed Precision matrices (K) in terms of correlation
 bdkhat_corr <- list()
 for (k in 1:length(bdkhat)){
@@ -32,7 +34,8 @@ for (k in 1:length(bdkhat)){
 }
 names(bdkhat_corr) <- country.names
 
-# Partial correlation matrices
+
+# Partial correlation - matrices
 bdpar_corr <- list()
 for (k in 1:length(bdkhat)){
   a <- bdkhat_corr[[k]]
@@ -41,7 +44,20 @@ for (k in 1:length(bdkhat)){
 }
 names(bdpar_corr) <- country.names
 
-# Symmetrize posterior probability matrices
+
+# define partial correlation network
+parcorr_graph <- list() 
+for (k in 1:length(bdpar_corr)){
+  parcorr_graph[[k]] <- graph_from_adjacency_matrix(bdpar_corr[[k]], 
+                                                    mode = "undirected", 
+                                                    diag = FALSE,
+                                                    weighted = TRUE)
+  print(k)   
+}
+names(parcorr_graph) <- country.names
+
+
+# Posterior probability matrices - symmetrized
 bdprob_symm <- list()
 for (k in 1:length(bdprob)){
   bdprob_symm[[k]] <- bdprob[[k]] + t(bdprob[[k]])
@@ -51,9 +67,19 @@ for (k in 1:length(bdprob)){
 names(bdprob_symm) <- country.names
 
 
-library(igraph)
+# Posterior probability matrices - graph
+bdprob_graph <- list()
+for (k in 1:length(bdprob_symm)){
+  bdprob_graph[[k]] <- graph_from_adjacency_matrix(bdprob_symm[[k]], 
+                                                   mode = "undirected", 
+                                                   diag = FALSE,
+                                                   weighted = TRUE)
+  print(k)
+}
+names(bdprob_graph) <- country.names
 
-# Signed (partial correlation) matrices
+
+# Signed (partial correlation) - graph
 sign <- list()
 sign_graph <- list()
 for (k in 1:length(bdpar_corr)){
@@ -67,5 +93,11 @@ names(sign) <- country.names
 names(sign_graph) <- country.names
 
 
-save(bdkhat_corr,bdpar_corr,bdprob,bdprob_symm,sign,sign_graph, file = "bdgraph_estimates_new.RData")
+
+
+save(bdkhat_corr,
+     bdpar_corr, parcorr_graph,
+     bdprob_symm, bdprob_graph,
+     sign, sign_graph, 
+     file = "bdgraph_estimates_new.RData")
 
