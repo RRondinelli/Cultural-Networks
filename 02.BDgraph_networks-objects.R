@@ -14,6 +14,7 @@ data <- readRDS("data")
 load("bdgraph_2million.RData") # comment to load your elaborations
 #load("bdgraph_estimates")     # uncomment to load your elaborations
 library(igraph)
+library(BDgraph)
 
 
 #--------------------------- Standardized precision matrices and partial correlation

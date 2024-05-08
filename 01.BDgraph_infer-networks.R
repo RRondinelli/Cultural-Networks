@@ -13,7 +13,7 @@
 #-----------------------------------------------------------------------------
 # IMPORTANT! 
 # Our estimates are contained in the object "bdgraph_2million.RData"
-# You can run this code to obtain new results otherwise you can skip this script
+# You can run this code to obtain new results otherwise you can skip this script and run "02.BDgraph_networks-objects"
 
 
 # Load data 

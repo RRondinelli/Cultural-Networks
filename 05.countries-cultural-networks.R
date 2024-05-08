@@ -21,7 +21,7 @@ load("bdgraph_estimates_new.RData") # networks objects generated in script "02.B
 load("coords.RData")
 
 library(remotes)
-remotes::install_version("Rttf2pt1", version = "1.3.8")
+remotes::install_version("Rttf2pt1", version = "1.3.8") # do not install if you already did
 library(Rttf2pt1)
 library(png)
 library(ggplot2)
@@ -59,7 +59,15 @@ for (i in 1:dim(data$`United States`)[2]){
          US_trait[[i]], width = 1000, height = 1000, units ="px")
 }
 
-# Before run this remember to put US distributions in a cartel called US that you need to create in your directory 
+
+#-----------------------------------------------------------------------------
+#-----------------------------------------------------------------------------
+# IMPORTANT!
+# Before run the following lines,
+# remember to put the US graphs saved above
+# in a cartel called "US" that you need to create in your directory 
+
+
 US_png <- list()
 for (i in 1:dim(data$`United States`)[2]){
   US_png[[i]] <- readPNG(paste0("US/US", i, ".png"))
