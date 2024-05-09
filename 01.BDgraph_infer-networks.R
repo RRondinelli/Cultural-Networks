@@ -59,7 +59,6 @@ for (i in 1:length(nets)) {
 names(bdnet) <- names(data)
 
 #--------------------------- Extract BDgraph objects
-library(igraph)
 
 # binary
 bdadj <- list() 
@@ -102,6 +101,8 @@ names(bdprob) <- country.names
 
 
 #--------------------------- Operations on your BDgraph objects or our loaded BDgraph objects
+
+library(igraph)
 
 # Transforme Precision matrices (K) in terms of correlation
 bdkhat_corr <- list()
