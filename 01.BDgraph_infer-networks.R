@@ -26,6 +26,7 @@ country.names <- names(data)
 
 # estimate networks with bdgraph
 library(BDgraph)
+library(stringr)
 
 for (k in 1:length(data)){
   
@@ -34,7 +35,7 @@ for (k in 1:length(data)){
   bdnet <- bdgraph(data[[k]], 
                    method = "gcgm", 
                    algorithm = "bdmcmc", 
-                   iter = 10000, #for our elaborations we used 2000000 of iterations
+                   iter = 1000, #for our elaborations we used 2000000 of iterations
                    not.cont = c(rep(1,dim(data[[k]])[2])), 
                    save = TRUE)
   
@@ -56,7 +57,7 @@ for (i in 1:length(nets)) {
   bdnet[[i]] <- readRDS(nets[i])
 }
 
-names(bdnet) <- names(data)
+names(bdnet) <- country.names
 
 #--------------------------- Extract BDgraph objects
 

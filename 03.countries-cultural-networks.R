@@ -75,11 +75,11 @@ for (i in 1:dim(data$`United States`)[2]){
 
 # Set up Graph 
 US <- parcorr_graph$`United States`
-E(US)$trasp <- E(bdprob_graph$`United States`)$weight
+E(US)$trasp <- bdprob_symm$`United States`[lower.tri(bdprob_symm$`United States`)]
 E(US)$color <- ifelse(E(sign_graph$`United States`)$weight==1, "green", "red")
 E(US)$green <- ifelse(E(sign_graph$`United States`)$weight==1, 0.8, 0)
 E(US)$red <- ifelse(E(sign_graph$`United States`)$weight==-1, 0.8, 0)
-E(US)$type <- ifelse(E(bdprob_graph$`United States`)$weight>0.5, 1, 3)
+E(US)$type <- ifelse(bdprob_symm$`United States`[lower.tri(bdprob_symm$`United States`)] > 0.5, 1, 3)
 V(US)$raster <- US_png[V(US)]
 V(US)$name <- c("level of happiness","trust in people",
                 "respect for authority","voice through petitions",
