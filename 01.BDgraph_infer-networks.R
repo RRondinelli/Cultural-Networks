@@ -35,7 +35,7 @@ for (k in 1:length(data)){
   bdnet <- bdgraph(data[[k]], 
                    method = "gcgm", 
                    algorithm = "bdmcmc", 
-                   iter = 1000, #for our elaborations we used 2000000 of iterations
+                   iter = 10000, #for our elaborations we used 2000000 of iterations
                    not.cont = c(rep(1,dim(data[[k]])[2])), 
                    save = TRUE)
   

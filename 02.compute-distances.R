@@ -241,9 +241,9 @@ library(tidyverse) # require if you didn't load before
 networks_graph <- graph_from_adjacency_matrix(dist.net, mode="undirected", diag=FALSE, weighted=TRUE)
 networks_list <- igraph::as_edgelist(networks_graph)
 
-iso2 <- read_excel("iso_alpha_2.xls") # Upload iso2 file
+iso2 <- read_excel("iso_alpha_2.xls") # Upload iso2 countries' codes
 
-geo_cepii <- read_excel("geo_cepii.xls") # Upload iso3 file
+geo_cepii <- read_excel("geo_cepii.xls") # Upload iso3 file countries' codes
 geo_cepii_nodup <- geo_cepii[!duplicated(geo_cepii[,c('iso2')]),]
 iso3 <- geo_cepii_nodup %>% 
   select(iso2, iso3)
