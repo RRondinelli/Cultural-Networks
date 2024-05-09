@@ -4,7 +4,7 @@
 #
 #     Luca De Benedictis - Roberto Rondinelli - Veronica Vinciotti
 #
-# 		    Script 05 - example of country's cultural networks
+# 		    Script 04 - example of country's cultural networks
 # ====================================================================
 
 

@@ -4,7 +4,7 @@
 #
 #     Luca De Benedictis - Roberto Rondinelli - Veronica Vinciotti
 #
-# 		            Script 04 - compute distances
+# 		            Script 03 - compute distances
 # ====================================================================
 
 
