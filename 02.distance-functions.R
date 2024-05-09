@@ -10,7 +10,6 @@
 
 # Load useful objects
 data <- readRDS("data") # required if you start from this script
-
 country.names <- names(data)
 
 

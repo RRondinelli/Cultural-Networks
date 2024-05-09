@@ -16,8 +16,8 @@
 
 
 # Load useful objects
-data <- readRDS("data")             # required if you start from this script
-load("bdgraph_estimates_new.RData") # networks objects generated in script "02.BDgraph_networks-objects", required if you start from this script 
+data <- readRDS("data")         # required if you start from this script
+load("bdgraph_estimates.RData") # networks objects generated in script "01.BDgraph_infer-networks", required if you start from this script 
 load("coords.RData")
 
 library(remotes)

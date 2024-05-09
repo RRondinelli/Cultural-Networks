@@ -15,7 +15,7 @@
 
 
 # Load useful objects
-load("bdgraph_estimates_new.RData") # networks objects generated in script "02.BDgraph_networks-objects", required if you start from this script 
+load("bdgraph_estimates.RData") # networks objects generated in script "01.BDgraph_infer-networks", required if you start from this script 
 pca_map6 <- readRDS("pca_map6")
 countries <- readRDS("countries")
 
