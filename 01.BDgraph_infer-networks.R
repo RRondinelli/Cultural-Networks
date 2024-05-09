@@ -91,7 +91,7 @@ names(bdprob) <- country.names
 
 
 #--------------------------- uncomment to load the BDgraph objects of our elaborations
-# load("bdgraph_2million.RData") 
+# load("bdgraph_2million.RData")
 # names(bdkhat) <- country.names
 # names(bdprob) <- country.names
 # names(bdadj) <- country.names

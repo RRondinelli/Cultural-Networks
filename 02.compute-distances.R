@@ -4,17 +4,17 @@
 #
 #     Luca De Benedictis - Roberto Rondinelli - Veronica Vinciotti
 #
-# 		            Script 03 - compute distances
+# 		            Script 02 - compute distances
 # ====================================================================
 
 
 # Load data and useful objects
 data <- readRDS("data") # required if you start from this script
-load("bdgraph_estimates.RData") # networks objects generated in script "01.BDgraph_infer-networks", required if you start from this script 
+load("bdgraph_estimates.RData") # required if you start from this script, networks objects generated in script "01.BDgraph_infer-networks"  
 pca_map6 <- readRDS("pca_map6")
 countries <- readRDS("countries")
 
-country.names <- names(data)
+country.names <- names(data) # required if you start from this script
 
 
 

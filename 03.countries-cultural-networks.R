@@ -4,7 +4,7 @@
 #
 #     Luca De Benedictis - Roberto Rondinelli - Veronica Vinciotti
 #
-# 		    Script 04 - example of country's cultural networks
+# 		    Script 03 - example of country's cultural networks
 # ====================================================================
 
 
@@ -17,7 +17,7 @@
 
 # Load useful objects
 data <- readRDS("data")         # required if you start from this script
-load("bdgraph_estimates.RData") # networks objects generated in script "01.BDgraph_infer-networks", required if you start from this script 
+load("bdgraph_estimates.RData") # required if you start from this script, networks objects generated in script "01.BDgraph_infer-networks"  
 load("coords.RData")
 
 library(remotes)
