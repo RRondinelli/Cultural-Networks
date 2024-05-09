@@ -54,24 +54,20 @@ for (i in 1:dim(data$`United States`)[2]){
   
 }
 
+
+# Save the distributions generated above as .png files
 for (i in 1:dim(data$`United States`)[2]){
   ggsave(paste0("US", i, ".png"), 
          US_trait[[i]], width = 1000, height = 1000, units ="px")
 }
 
 
-#-----------------------------------------------------------------------------
-#-----------------------------------------------------------------------------
-# IMPORTANT!
-# Before run the following lines,
-# remember to put the US graphs saved above
-# in a cartel called "US" that you need to create in your directory 
-
-
+# Load the .png saved above
 US_png <- list()
 for (i in 1:dim(data$`United States`)[2]){
-  US_png[[i]] <- readPNG(paste0("US/US", i, ".png"))
+  US_png[[i]] <- readPNG(paste0("US", i, ".png"))
 }
+
 
 # Set up Graph 
 US <- parcorr_graph$`United States`
@@ -86,6 +82,7 @@ V(US)$name <- c("level of happiness","trust in people",
                 "importance of God","justification of homosexuality",
                 "justification of abortion","national pride",
                 "post-materialism","obedience vs independence")
+
 
 # United States graph
 plot_US <- plot.igraph(US, directed=F,
